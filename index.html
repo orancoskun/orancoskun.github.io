@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oran Coşkun — IT Teacher & Computer Science Educator</title>
+  <meta name="description"
+    content="Personal website of Oran Coşkun, Information Technology Teacher & Computer Science Educator. Empowering students with computational thinking, hands-on programming, and digital literacy.">
+  <meta name="keywords"
+    content="Oran Coşkun, IT Teacher, Computer Science Teacher, Tech Educator, Programming Teacher, Python, Web Development, Educational Technology, Curriculum">
+  <meta name="author" content="Oran Coşkun">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Oran Coşkun — IT Teacher & Computer Science Educator">
+  <meta property="og:description"
+    content="Empowering the next generation with computational thinking, practical engineering, and lifelong curiosity.">
+  <meta property="og:image" content="assets/images/avatar.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Oran Coşkun — IT Teacher & Computer Science Educator">
+  <meta name="twitter:description"
+    content="Empowering the next generation with computational thinking, practical engineering, and lifelong curiosity.">
+  <meta name="twitter:image" content="assets/images/avatar.jpg">
+
+  <!-- Google Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+</head>
+
+<body>
+
+  <!-- Ambient Grid Overlay -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress-bar" class="reading-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+
+      <div class="brand-wrapper">
+        <a href="#hero" class="brand-logo" aria-label="Oran Coşkun Home">
+          <span class="brand-monogram">OC</span>
+        </a>
+        <div class="live-status-pill">
+          <span class="status-dot"></span>
+          <span>Open for IT workshops & curriculum design</span>
+        </div>
+      </div>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#works" class="nav-link">Projects</a></li>
+          <li><a href="#terminal" class="nav-link">Classroom CLI</a></li>
+          <li><a href="#stack" class="nav-link">Curriculum</a></li>
+          <li><a href="#experience" class="nav-link">Teaching Journey</a></li>
+          <li><a href="#writing" class="nav-link">Articles</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Quick Command Palette Trigger -->
+        <button type="button" class="btn-cmd-k trigger-cmd-k" id="btn-quick-search" aria-label="Open Command Palette">
+          <span>Search</span>
+          <span class="kbd-shortcut">⌘K</span>
+        </button>
+
+        <!-- Theme Switcher -->
+        <button type="button" class="theme-toggle-btn" id="theme-toggle-btn"
+          aria-label="Toggle Obsidian or Paper Theme">
+          <span id="theme-icon">☀️</span>
+        </button>
+
+        <!-- CV Action -->
+        <button type="button" class="btn-resume" id="btn-header-resume" onclick="window.print()"
+          aria-label="Print or Save CV">
+          <span>Teaching CV ↗</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open Mobile Navigation">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#works" class="nav-link">Educational Projects</a>
+    <a href="#terminal" class="nav-link">Classroom Terminal</a>
+    <a href="#stack" class="nav-link">Curriculum & Tech</a>
+    <a href="#experience" class="nav-link">Teaching Journey</a>
+    <a href="#writing" class="nav-link">Articles & Notes</a>
+    <a href="#contact" class="nav-link">Get In Touch</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==========================================
+         HERO SECTION (EDITORIAL MINIMALIST)
+         ========================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+
+        <div class="hero-meta-bar">
+          <div class="hero-meta-tag">
+            <span class="tag-indicator">●</span>
+            <span>ROLE: IT TEACHER & COMPUTER SCIENCE INSTRUCTOR</span>
+          </div>
+          <div class="hero-meta-tag">
+            <span>TIME: </span>
+            <span id="live-time-display">--:--:--</span>
+          </div>
+          <div class="hero-meta-tag">
+            <span>LOCATION: YALOVA / REMOTE</span>
+          </div>
+        </div>
+
+        <div class="hero-grid">
+
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Empowering students with <span class="italic-emphasis">computational thinking</span>, practical code, and
+              lifelong digital literacy.
+            </h1>
+
+            <p class="hero-bio">
+              Hello, I am <strong>Oran Coşkun.</strong> As an Information Technology Teacher and Computer Science
+              Educator, I translate complex computing topics into engaging, project-based classroom experiences. From
+              programming fundamentals and computer architecture to web development, networking, and ethical
+              cybersecurity, I guide students to build real systems and understand the digital world around them.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#works" class="btn-primary" id="hero-btn-works">
+                <span>Educational Projects ↓</span>
+              </a>
+              <a href="#contact" class="btn-secondary" id="hero-btn-contact">
+                <span>Get In Touch ✉</span>
+              </a>
+              <button type="button" class="email-copy-pill btn-copy-email" id="hero-btn-email"
+                aria-label="Copy Email Address">
+                <span>📋 orancskn@gmail.com</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Editorial Portrait Card -->
+          <div class="hero-portrait-card">
+            <div class="portrait-frame">
+              <img src="assets/images/avatar.jpg" alt="Oran Coşkun - IT Teacher Portrait" class="portrait-img"
+                width="340" height="340">
+              <div class="portrait-caption">
+                <div>
+                  <div class="portrait-caption-name">Oran Coşkun</div>
+                  <div class="portrait-caption-role">IT Teacher & Tech Educator</div>
+                </div>
+                <div class="hero-meta-tag" style="margin: 0;">
+                  <span class="tag-indicator">●</span>
+                  <span style="font-size: 0.75rem; color: var(--accent-emerald);">CLASSROOM READY</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Metric & Stats Strip -->
+        <div class="hero-stats-strip">
+          <div class="stat-item">
+            <span class="stat-value">1,200+</span>
+            <span class="stat-label">Students Taught & Mentored</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Project-Based Learning Method</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">20+</span>
+            <span class="stat-label">Years of IT & Educational Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">40+</span>
+            <span class="stat-label">Interactive Coding Labs Developed</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 01: FEATURED WORKS & EDUCATIONAL PROJECTS
+         ========================================== -->
+    <section id="works" class="section section-bordered">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span>01 / PROJECTS</span>
+          </div>
+          <h2 class="section-title">Educational Platforms & Learning Tools</h2>
+          <p class="section-desc">
+            A curated showcase of interactive sandboxes, classroom simulators, open curriculum resources, and tools
+            developed to make learning technology inspiring and intuitive.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="works-filter-bar" role="toolbar" aria-label="Project filter options">
+          <button type="button" class="filter-btn active" data-filter="all">All Projects (5)</button>
+          <button type="button" class="filter-btn" data-filter="systems">Classroom Platforms</button>
+          <button type="button" class="filter-btn" data-filter="devtools">Simulators & Labs</button>
+          <button type="button" class="filter-btn" data-filter="fintech">Cybersecurity</button>
+          <button type="button" class="filter-btn" data-filter="oss">Open Curriculum</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: EDUBYTE (FEATURED TALL / FULL WIDTH) -->
+          <article class="project-card featured-tall" data-category="systems">
+            <div class="project-media-wrapper">
+              <img src="assets/images/project-cloudpulse.jpg"
+                alt="EduByte Classroom Code Sandbox and Autograder Screenshot" class="project-img" loading="lazy">
+            </div>
+            <div class="project-content-wrapper">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-category-tag">CLASSROOM PLATFORM & EDTECH</span>
+                  <span>2025 – 2026</span>
+                </div>
+                <h3 class="project-title">EduByte Code Sandbox & Autograder</h3>
+                <p class="project-summary">
+                  A lightweight browser-based programming environment and automated assignment evaluator created for
+                  student programmers. Provides instant syntax error diagnostics, interactive test-runner output, and
+                  real-time teacher telemetry.
+                </p>
+                <ul class="project-specs-list">
+                  <li class="project-spec-item">
+                    <span class="project-spec-bullet">▸</span>
+                    <span><strong>1,200+ student lab submissions</strong> evaluated with zero server latency</span>
+                  </li>
+                  <li class="project-spec-item">
+                    <span class="project-spec-bullet">▸</span>
+                    <span>Sandboxed WebAssembly runtime executing Python and JavaScript on low-spec school PCs</span>
+                  </li>
+                  <li class="project-spec-item">
+                    <span class="project-spec-bullet">▸</span>
+                    <span>Teacher live dashboard showing class-wide comprehension heatmaps</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="project-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">WebAssembly</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                </div>
+                <div class="project-actions">
+                  <button type="button" class="btn-inspect" data-project="cloudpulse"
+                    aria-label="Inspect EduByte Details">
+                    <span>Inspect Pedagogy & Code 🔍</span>
+                  </button>
+                  <a href="https://github.com/orancoskun/edubyte-classroom" target="_blank" rel="noopener noreferrer"
+                    class="link-out">
+                    <span>Repository ↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: KROMA NETWORK LAB -->
+          <article class="project-card half-width" data-category="devtools">
+            <div class="project-media-wrapper">
+              <img src="assets/images/project-kroma.svg" alt="Kroma Visual Network Simulator" class="project-img"
+                loading="lazy">
+            </div>
+            <div class="project-content-wrapper">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-category-tag">SIMULATORS & LAB TOOLS</span>
+                  <span>2024 – 2025</span>
+                </div>
+                <h3 class="project-title">NetSim: Visual Network & Packet Lab</h3>
+                <p class="project-summary">
+                  Interactive packet tracer and OSI model visualizer designed for secondary school networking classes.
+                  Students visually build topologies, inspect TCP/UDP handshakes, and calculate IP subnets in real time.
+                </p>
+                <ul class="project-specs-list">
+                  <li class="project-spec-item">
+                    <span class="project-spec-bullet">▸</span>
+                    <span>Visual packet routing simulation with step-by-step layer inspection</span>
+                  </li>
+                  <li class="project-spec-item">
+                    <span class="project-spec-bullet">▸</span>
+                    <span>Gamified subnetting quizzes with instant visual feedback</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="project-tags">
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Canvas API</span>
+                  <span class="tech-tag">WebSockets</span>
+                  <span class="tech-tag">Vite</span>
+                  <span class="tech-tag">Networking</span>
+                </div>
+                <div class="project-actions">
+                  <button type="button" class="btn-inspect" data-project="kroma" aria-label="Inspect NetSim Details">
+                    <span>Inspect Pedagogy & Code 🔍</span>
+                  </button>
+                  <a href="https://github.com/orancoskun/netsim-interactive" target="_blank" rel="noopener noreferrer"
+                    class="link-out">
+                    <span>Repository ↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: CYBERSHIELD CTF -->
+          <article class="project-card half-width" data-category="fintech systems">
+            <div class="project-media-wrapper">
+              <img src="assets/images/project-hyperion.svg" alt="CyberShield Security Range Mockup" class="project-img"
+                loading="lazy">
+            </div>
+            <div class="project-content-wrapper">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-category-tag">CYBERSECURITY & ETHICAL HACKING</span>
+                  <span>2024</span>
+                </div>
+                <h3 class="project-title">CyberShield Student Security Range</h3>
+                <p class="project-summary">
+                  A beginner-friendly Capture-The-Flag (CTF) platform and cybersecurity sandbox. Teaches students
+                  digital privacy, safe authentication practices, cryptography basics, and ethical online defense.
+                </p>
+                <ul class="project-specs-list">
+                  <li class="project-spec-item">
+                    <span class="project-spec-bullet">▸</span>
+                    <span>35+ interactive challenges from Caesar ciphers to SQL injection defense</span>
+                  </li>
+                  <li class="project-spec-item">
+                    <span class="project-spec-bullet">▸</span>
+                    <span>Containerized sandbox environments reset in under 3 seconds</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="project-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">Linux</span>
+                  <span class="tech-tag">Cybersecurity</span>
+                  <span class="tech-tag">Redis</span>
+                </div>
+                <div class="project-actions">
+                  <button type="button" class="btn-inspect" data-project="hyperion"
+                    aria-label="Inspect CyberShield Details">
+                    <span>Inspect Pedagogy & Code 🔍</span>
+                  </button>
+                  <a href="https://github.com/orancoskun/cybershield-ctf" target="_blank" rel="noopener noreferrer"
+                    class="link-out">
+                    <span>Repository ↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4: PRISM UI STARTER -->
+          <article class="project-card half-width" data-category="oss">
+            <div class="project-media-wrapper">
+              <img src="assets/images/project-prism.svg" alt="Prism Student Web Development Kit" class="project-img"
+                loading="lazy">
+            </div>
+            <div class="project-content-wrapper">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-category-tag">OPEN CURRICULUM & WEB BASICS</span>
+                  <span>2023 – 2024</span>
+                </div>
+                <h3 class="project-title">Prism: Student Web Dev Starter Kit</h3>
+                <p class="project-summary">
+                  A classroom-tested curriculum template and component set that teaches pure HTML5 and modern CSS
+                  without the confusion of bulky frameworks. Focused on semantic markup, flexbox, and accessibility.
+                </p>
+                <ul class="project-specs-list">
+                  <li class="project-spec-item">
+                    <span class="project-spec-bullet">▸</span>
+                    <span>Used by over 800 students to build their first responsive portfolios</span>
+                  </li>
+                  <li class="project-spec-item">
+                    <span class="project-spec-bullet">▸</span>
+                    <span>Clear visual guides for layout grids, color contrast, and keyboard navigation</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="project-tags">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Web Accessibility</span>
+                  <span class="tech-tag">GitHub</span>
+                </div>
+                <div class="project-actions">
+                  <button type="button" class="btn-inspect" data-project="prism" aria-label="Inspect Prism Kit Details">
+                    <span>Inspect Pedagogy & Code 🔍</span>
+                  </button>
+                  <a href="https://github.com/orancoskun/prism-student-webkit" target="_blank" rel="noopener noreferrer"
+                    class="link-out">
+                    <span>Repository ↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 5: AURA CURRICULUM AI -->
+          <article class="project-card half-width" data-category="systems">
+            <div class="project-media-wrapper">
+              <img src="assets/images/project-aura.svg" alt="Aura Syllabus and Lesson Synthesizer" class="project-img"
+                loading="lazy">
+            </div>
+            <div class="project-content-wrapper">
+              <div>
+                <div class="project-meta-top">
+                  <span class="project-category-tag">AI IN EDUCATION & CURRICULUM</span>
+                  <span>2023</span>
+                </div>
+                <h3 class="project-title">Aura Lesson & Rubric Synthesizer</h3>
+                <p class="project-summary">
+                  An open-source lesson planning and rubric synthesis assistant aligned with computer science curriculum
+                  frameworks. Generates differentiated coding assignments tailored to beginner, intermediate, and
+                  advanced learners.
+                </p>
+                <ul class="project-specs-list">
+                  <li class="project-spec-item">
+                    <span class="project-spec-bullet">▸</span>
+                    <span>Multi-tiered rubric builder saving educators 5+ hours weekly</span>
+                  </li>
+                  <li class="project-spec-item">
+                    <span class="project-spec-bullet">▸</span>
+                    <span>Local-first AI integration respecting complete student privacy</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="project-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">Next.js</span>
+                  <span class="tech-tag">Local LLM</span>
+                  <span class="tech-tag">Pedagogy</span>
+                </div>
+                <div class="project-actions">
+                  <button type="button" class="btn-inspect" data-project="aura" aria-label="Inspect Aura Details">
+                    <span>Inspect Pedagogy & Code 🔍</span>
+                  </button>
+                  <a href="https://github.com/orancoskun/aura-curriculum-ai" target="_blank" rel="noopener noreferrer"
+                    class="link-out">
+                    <span>Repository ↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 02: INTERACTIVE CLASSROOM TERMINAL
+         ========================================== -->
+    <section id="terminal" class="section section-bordered">
+      <div class="container container-narrow">
+
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span>02 / PLAYGROUND</span>
+          </div>
+          <h2 class="section-title">Interactive Classroom CLI</h2>
+          <p class="section-desc">
+            A live terminal simulation identical to the one I use in the classroom to teach students Linux command-line
+            literacy, shell scripting, and computational problem-solving.
+          </p>
+        </div>
+
+        <div class="terminal-wrapper" id="terminal-wrapper">
+          <div class="terminal-header">
+            <div class="terminal-traffic-lights">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <div class="terminal-title">student@oran-classroom:~ (bash sandbox)</div>
+            <div class="terminal-badge">INTERACTIVE EDUCATIONAL SHELL</div>
+          </div>
+
+          <div class="terminal-body" id="terminal-output-body">
+            <div class="term-line">
+              <span class="term-accent">Oran Coşkun IT Classroom Shell [Version 4.2.0]</span>
+            </div>
+            <div class="term-line">
+              <span class="term-muted">Type <span class="term-success">'help'</span> or click a quick command below to
+                explore courses, teaching philosophy, and student resources:</span>
+            </div>
+            <div class="term-line">
+              <span class="term-prompt">oran@classroom:~$</span> <span class="term-success">echo "Welcome to the
+                Computer Science lab!"</span>
+            </div>
+            <div class="term-line">
+              Welcome to the Computer Science lab!
+            </div>
+          </div>
+
+          <!-- Input line -->
+          <div style="padding: 0 1.5rem 1rem;">
+            <div class="term-input-row">
+              <span class="term-prompt">oran@classroom:~$</span>
+              <input type="text" id="terminal-cli-input" class="terminal-input"
+                placeholder="type 'help', 'courses', 'skills', 'pedagogy', 'bio'..." autocomplete="off"
+                spellcheck="false">
+            </div>
+          </div>
+
+          <!-- Quick Chips -->
+          <div class="terminal-quick-chips">
+            <span class="chip-label">Quick Commands:</span>
+            <button type="button" class="term-chip" data-cmd="help">help</button>
+            <button type="button" class="term-chip" data-cmd="courses">courses</button>
+            <button type="button" class="term-chip" data-cmd="skills">skills</button>
+            <button type="button" class="term-chip" data-cmd="pedagogy">pedagogy</button>
+            <button type="button" class="term-chip" data-cmd="bio">bio</button>
+            <button type="button" class="term-chip" data-cmd="projects">projects</button>
+            <button type="button" class="term-chip" data-cmd="contact">contact</button>
+            <button type="button" class="term-chip" data-cmd="curl resume">curl cv</button>
+            <button type="button" class="term-chip" data-cmd="clear">clear</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 03: CURRICULUM & INSTRUCTIONAL EXPERTISE
+         ========================================== -->
+    <section id="stack" class="section section-bordered">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span>03 / CURRICULUM</span>
+          </div>
+          <h2 class="section-title">Instructional Domains & Technologies Taught</h2>
+          <p class="section-desc">
+            Subjects and tools I actively teach in the classroom, balancing theoretical understanding with hands-on labs
+            and real-world project delivery.
+          </p>
+        </div>
+
+        <div class="stack-matrix-grid">
+
+          <!-- Category 1: Programming & Web Fundamentals -->
+          <div class="stack-category-card">
+            <div class="stack-cat-header">
+              <div class="stack-cat-icon">💻</div>
+              <h3 class="stack-cat-title">Core Coding & Web</h3>
+            </div>
+            <div class="skills-item-list">
+              <div class="skill-row">
+                <div class="skill-meta">
+                  <span class="skill-name">Python Programming</span>
+                  <span class="skill-level-text">Beginner to Advanced</span>
+                </div>
+                <div class="skill-note">Syntax, algorithms, data structures, automation scripts, Pygame</div>
+                <div class="skill-meter-bg">
+                  <div class="skill-meter-fill" style="width: 98%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-meta">
+                  <span class="skill-name">Web Development (HTML/CSS/JS)</span>
+                  <span class="skill-level-text">Full Curriculum</span>
+                </div>
+                <div class="skill-note">Semantic HTML5, CSS Flexbox/Grid, vanilla JavaScript, DOM manipulation</div>
+                <div class="skill-meter-bg">
+                  <div class="skill-meter-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-meta">
+                  <span class="skill-name">Databases & SQL</span>
+                  <span class="skill-level-text">Practical Data</span>
+                </div>
+                <div class="skill-note">Entity relationship modeling, SQL queries, SQLite, PostgreSQL</div>
+                <div class="skill-meter-bg">
+                  <div class="skill-meter-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-meta">
+                  <span class="skill-name">Computational Thinking</span>
+                  <span class="skill-level-text">Core Foundation</span>
+                </div>
+                <div class="skill-note">Decomposition, pattern recognition, abstraction, flowcharts</div>
+                <div class="skill-meter-bg">
+                  <div class="skill-meter-fill" style="width: 96%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Systems, Networking & Security -->
+          <div class="stack-category-card">
+            <div class="stack-cat-header">
+              <div class="stack-cat-icon">🌐</div>
+              <h3 class="stack-cat-title">IT Systems & Networking</h3>
+            </div>
+            <div class="skills-item-list">
+              <div class="skill-row">
+                <div class="skill-meta">
+                  <span class="skill-name">Computer Networks</span>
+                  <span class="skill-level-text">Hands-On Labs</span>
+                </div>
+                <div class="skill-note">OSI model, TCP/IP, IP addressing & subnetting, DNS, Wireshark</div>
+                <div class="skill-meter-bg">
+                  <div class="skill-meter-fill" style="width: 92%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-meta">
+                  <span class="skill-name">Computer Hardware & OS</span>
+                  <span class="skill-level-text">Lab Maintenance</span>
+                </div>
+                <div class="skill-note">PC assembly, troubleshooting, motherboard architecture, Linux dual-boot</div>
+                <div class="skill-meter-bg">
+                  <div class="skill-meter-fill" style="width: 94%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-meta">
+                  <span class="skill-name">Linux & Command Line</span>
+                  <span class="skill-level-text">CLI Fluency</span>
+                </div>
+                <div class="skill-note">Bash scripting, file permissions, package management, process control</div>
+                <div class="skill-meter-bg">
+                  <div class="skill-meter-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-meta">
+                  <span class="skill-name">Cybersecurity & Ethics</span>
+                  <span class="skill-level-text">Digital Literacy</span>
+                </div>
+                <div class="skill-note">Password defense, safe browsing, phishing detection, data privacy</div>
+                <div class="skill-meter-bg">
+                  <div class="skill-meter-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Pedagogy & Classroom EdTech -->
+          <div class="stack-category-card">
+            <div class="stack-cat-header">
+              <div class="stack-cat-icon">🎓</div>
+              <h3 class="stack-cat-title">Pedagogy & Classroom Tools</h3>
+            </div>
+            <div class="skills-item-list">
+              <div class="skill-row">
+                <div class="skill-meta">
+                  <span class="skill-name">Project-Based Learning (PBL)</span>
+                  <span class="skill-level-text">Methodology</span>
+                </div>
+                <div class="skill-note">Inquiry-driven units, peer code reviews, student portfolio exhibitions</div>
+                <div class="skill-meter-bg">
+                  <div class="skill-meter-fill" style="width: 98%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-meta">
+                  <span class="skill-name">Git & GitHub Classroom</span>
+                  <span class="skill-level-text">Workflow</span>
+                </div>
+                <div class="skill-note">Version control, collaborative group projects, automated test checks</div>
+                <div class="skill-meter-bg">
+                  <div class="skill-meter-fill" style="width: 92%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-meta">
+                  <span class="skill-name">Robotics & IoT (Arduino/Micro:bit)</span>
+                  <span class="skill-level-text">Physical Computing</span>
+                </div>
+                <div class="skill-note">Sensor circuits, breadboarding, motor controls, C++ embedded basics</div>
+                <div class="skill-meter-bg">
+                  <div class="skill-meter-fill" style="width: 86%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-meta">
+                  <span class="skill-name">Differentiated Instruction</span>
+                  <span class="skill-level-text">Inclusive Practice</span>
+                </div>
+                <div class="skill-note">Multi-tiered challenge problems, visual aids, accessible curriculum</div>
+                <div class="skill-meter-bg">
+                  <div class="skill-meter-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 04: TEACHING JOURNEY & EXPERIENCE
+         ========================================== -->
+    <section id="experience" class="section section-bordered">
+      <div class="container container-narrow">
+
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span>04 / JOURNEY</span>
+          </div>
+          <h2 class="section-title">Teaching Milestones & Institutional Impact</h2>
+          <p class="section-desc">
+            A chronological timeline of classroom teaching, curriculum design, student competition mentorship, and lab
+            leadership.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+
+          <!-- Role 1 -->
+          <div class="timeline-item active">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content-card">
+              <div class="timeline-header-row">
+                <div>
+                  <h3 class="timeline-role-title">Lead IT Teacher & Technology Department Chair</h3>
+                  <div class="timeline-company">Science & Technology Academy — Yalova</div>
+                </div>
+                <span class="timeline-period-badge">2022 — Present</span>
+              </div>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+                Leading the high school computer science department, authoring a modern 4-year curriculum spanning
+                Python, Web Systems, and Networking.
+              </p>
+              <ul class="timeline-bullet-list">
+                <li class="timeline-bullet">
+                  Implemented an automated coding feedback platform that reduced homework grading turnaround by
+                  <strong>75%</strong> while boosting assignment completion to <strong>98%</strong>.
+                </li>
+                <li class="timeline-bullet">
+                  Mentored 14 student teams competing in national robotics and coding competitions, with 4 teams earning
+                  top 3 national placements.
+                </li>
+                <li class="timeline-bullet">
+                  Organized annual "Hour of Code" and Digital Safety workshops reaching over <strong>600+ students and
+                    parents</strong> across the community.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content-card">
+              <div class="timeline-header-row">
+                <div>
+                  <h3 class="timeline-role-title">Computer Science & IT Instructor</h3>
+                  <div class="timeline-company">Vocational & Technical High School — Yalova</div>
+                </div>
+                <span class="timeline-period-badge">2019 — 2022</span>
+              </div>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+                Taught Web Development, Computer Hardware Maintenance, Database Administration, and Networking to
+                vocational students.
+              </p>
+              <ul class="timeline-bullet-list">
+                <li class="timeline-bullet">
+                  Modernized the school computer laboratory by transitioning 45 workstations to high-performance Linux
+                  dual-boot setups.
+                </li>
+                <li class="timeline-bullet">
+                  Guided 80+ graduating seniors through capstone web application projects, with 92% successfully passing
+                  vocational competency exams.
+                </li>
+                <li class="timeline-bullet">
+                  Authored modular lab manuals for SQL and computer hardware assembly that were adopted school-wide.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content-card">
+              <div class="timeline-header-row">
+                <div>
+                  <h3 class="timeline-role-title">Educational Technology Specialist & Trainer</h3>
+                  <div class="timeline-company">Future Tech Education Center</div>
+                </div>
+                <span class="timeline-period-badge">2017 — 2019</span>
+              </div>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+                Facilitated professional development programs for teachers and delivered interactive programming
+                workshops for youth.
+              </p>
+              <ul class="timeline-bullet-list">
+                <li class="timeline-bullet">
+                  Trained 120+ educators across 15 schools on integrating coding, Arduino, and digital portfolios into
+                  standard curricula.
+                </li>
+                <li class="timeline-bullet">
+                  Organized weekend coding bootcamps covering block-based programming (Scratch), Python basics, and
+                  physical computing.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Role 4 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content-card">
+              <div class="timeline-header-row">
+                <div>
+                  <h3 class="timeline-role-title">Bachelor of Science in Computer Education & Instructional Tech (CEIT)
+                  </h3>
+                  <div class="timeline-company">Faculty of Education — University Honors</div>
+                </div>
+                <span class="timeline-period-badge">2013 — 2017</span>
+              </div>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0;">
+                Focused on instructional design, cognitive science, programming pedagogy, and educational software
+                development.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 05: EDUCATIONAL ARTICLES & NOTES
+         ========================================== -->
+    <section id="writing" class="section section-bordered">
+      <div class="container container-narrow">
+
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span>05 / ARTICLES</span>
+          </div>
+          <h2 class="section-title">Teaching Notes & Pedagogical Insights</h2>
+          <p class="section-desc">
+            Reflections on effective computer science teaching methods, building student confidence, and fostering
+            digital literacy.
+          </p>
+        </div>
+
+        <div class="articles-list">
+
+          <article class="article-row-item" onclick="window.open('https://github.com/orancoskun', '_blank')">
+            <div class="article-date">NOV 2025</div>
+            <div class="article-title-group">
+              <h3 class="article-title">Demystifying Algorithmic Thinking in Secondary Education: Moving Beyond Syntax
+              </h3>
+              <p class="article-snippet">How focusing on decomposition and flowchart modeling before writing a single
+                line of code cures syntax anxiety and accelerates deep problem-solving skills.</p>
+            </div>
+            <div class="article-meta-right">
+              <span>6 MIN READ</span>
+              <span class="read-arrow">→</span>
+            </div>
+          </article>
+
+          <article class="article-row-item" onclick="window.open('https://github.com/orancoskun', '_blank')">
+            <div class="article-date">APR 2025</div>
+            <div class="article-title-group">
+              <h3 class="article-title">Why Every High School Student Should Build Their Own Web Server from Scratch
+              </h3>
+              <p class="article-snippet">Deconstructing the web from magic to mechanics: how a simple 50-line Python
+                socket server teaches students the entire internet stack.</p>
+            </div>
+            <div class="article-meta-right">
+              <span>5 MIN READ</span>
+              <span class="read-arrow">→</span>
+            </div>
+          </article>
+
+          <article class="article-row-item" onclick="window.open('https://github.com/orancoskun', '_blank')">
+            <div class="article-date">DEC 2024</div>
+            <div class="article-title-group">
+              <h3 class="article-title">Ethical AI and Digital Literacy in the 2026 Classroom: A Guide for Educators
+              </h3>
+              <p class="article-snippet">Practical guidelines on teaching students to use AI tools as cognitive partners
+                and co-pilots without eroding critical reasoning or code comprehension.</p>
+            </div>
+            <div class="article-meta-right">
+              <span>8 MIN READ</span>
+              <span class="read-arrow">→</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 06: ABOUT & TEACHING PHILOSOPHY
+         ========================================== -->
+    <section id="about" class="section section-bordered">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span>06 / ABOUT</span>
+          </div>
+          <h2 class="section-title">About Me & Teaching Philosophy</h2>
+          <p class="section-desc">
+            How I create inclusive, curious, and resilient learning environments in the modern IT classroom.
+          </p>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-bio-prose">
+            <p>
+              I believe that learning technology is not merely about memorizing programming syntax or passing
+              standardized tests—it is about cultivating a fearless mindset for problem solving. When students
+              understand how computers think, they transform from passive consumers of digital products into active,
+              creative builders.
+            </p>
+            <p>
+              In my classroom, mistakes are welcomed as the most valuable learning data. Debugging an error message is
+              not a failure; it is an authentic puzzle that develops resilience and critical reasoning. Whether guiding
+              a student through their first Python "Hello World" or helping an advanced class configure a routed virtual
+              network, I focus on the "why" beneath the surface.
+            </p>
+            <p>
+              Beyond the classroom, I continuously experiment with new open-source educational software, design hands-on
+              physical computing experiments with microcontrollers, and advocate for equitable computer science
+              education for all learners regardless of their background.
+            </p>
+          </div>
+
+          <div class="about-principles-card">
+            <h3 class="principles-title">Core Pedagogical Principles</h3>
+            <div class="principles-list">
+
+              <div class="principle-item">
+                <span class="principle-num">01</span>
+                <div>
+                  <h4 class="principle-heading">Learn by Building, Not Memorizing</h4>
+                  <p class="principle-desc">Students retain concepts best when applying them immediately to build games,
+                    websites, and working tools.</p>
+                </div>
+              </div>
+
+              <div class="principle-item">
+                <span class="principle-num">02</span>
+                <div>
+                  <h4 class="principle-heading">Debugging Fosters Resilience</h4>
+                  <p class="principle-desc">Encountering errors is essential. Teaching structured troubleshooting turns
+                    frustration into triumph.</p>
+                </div>
+              </div>
+
+              <div class="principle-item">
+                <span class="principle-num">03</span>
+                <div>
+                  <h4 class="principle-heading">Demystify the Digital Box</h4>
+                  <p class="principle-desc">Every piece of technology is made by people. By taking things apart,
+                    students realize they can build them too.</p>
+                </div>
+              </div>
+
+              <div class="principle-item">
+                <span class="principle-num">04</span>
+                <div>
+                  <h4 class="principle-heading">Inclusion & Equitable Access</h4>
+                  <p class="principle-desc">Computer science is for everyone. Diverse classroom perspectives produce
+                    more thoughtful technology.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 07: CONTACT & COLLABORATION
+         ========================================== -->
+    <section id="contact" class="section">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-eyebrow">
+            <span>07 / CONTACT</span>
+          </div>
+          <h2 class="section-title">Let's Connect & Collaborate</h2>
+          <p class="section-desc">
+            Whether you want to discuss curriculum design, invite me for an educational workshop, or share tech teaching
+            resources, feel free to reach out.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info-block">
+            <div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Direct Channels</h3>
+              <p style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.7;">
+                I am based in Yalova, Turkey (UTC+3) and collaborate with educators and educational institutions
+                worldwide. Inquiries are typically answered within 24 hours.
+              </p>
+
+              <div class="contact-channels-list">
+
+                <a href="mailto:orancskn@gmail.com" class="channel-link-card">
+                  <div class="channel-left">
+                    <span class="channel-icon">✉️</span>
+                    <div>
+                      <div class="channel-name">Direct Email</div>
+                      <div class="channel-handle">orancskn@gmail.com</div>
+                    </div>
+                  </div>
+                  <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">COPY
+                    📋</span>
+                </a>
+
+                <a href="https://github.com/orancoskun" target="_blank" rel="noopener noreferrer"
+                  class="channel-link-card">
+                  <div class="channel-left">
+                    <span class="channel-icon">🐙</span>
+                    <div>
+                      <div class="channel-name">GitHub Classroom & Code</div>
+                      <div class="channel-handle">github.com/orancoskun</div>
+                    </div>
+                  </div>
+                  <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">VISIT
+                    ↗</span>
+                </a>
+
+                <a href="https://linkedin.com/in/orancoskun" target="_blank" rel="noopener noreferrer"
+                  class="channel-link-card">
+                  <div class="channel-left">
+                    <span class="channel-icon">💼</span>
+                    <div>
+                      <div class="channel-name">LinkedIn</div>
+                      <div class="channel-handle">linkedin.com/in/orancoskun</div>
+                    </div>
+                  </div>
+                  <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">CONNECT
+                    ↗</span>
+                </a>
+
+                <a href="https://instagram.com/0orco0" target="_blank" rel="noopener noreferrer"
+                  class="channel-link-card">
+                  <div class="channel-left">
+                    <span class="channel-icon">📷</span>
+                    <div>
+                      <div class="channel-name">Instagram</div>
+                      <div class="channel-handle">0orco0</div>
+                    </div>
+                  </div>
+                  <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">FOLLOW
+                    ↗</span>
+                </a>
+
+              </div>
+            </div>
+
+            <div
+              style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); padding: 1rem; background: var(--badge-bg); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+              Department: <span style="color: var(--accent-emerald);">Information Technology & Computer Science
+                Education</span>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.35rem; margin-bottom: 1.5rem;">Send a Message</h3>
+            <form id="contact-form" class="contact-form" novalidate>
+
+              <div class="form-group">
+                <label for="form-name" class="form-label">
+                  <span>Your Name</span>
+                  <span style="color: var(--accent-emerald);">*</span>
+                </label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. Zeynep Kaya" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">
+                  <span>Your Email Address</span>
+                  <span style="color: var(--accent-emerald);">*</span>
+                </label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. zeynep@school.edu" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">
+                  <span>Subject</span>
+                  <span class="form-label-opt">(Optional)</span>
+                </label>
+                <input type="text" id="form-subject" class="form-input"
+                  placeholder="e.g. Curriculum Consultation / Workshop">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">
+                  <span>Message & Inquiries</span>
+                  <span style="color: var(--accent-emerald);">*</span>
+                </label>
+                <textarea id="form-message" class="form-textarea"
+                  placeholder="Share your message, school project, or questions about IT teaching..."
+                  required></textarea>
+              </div>
+
+              <button type="submit" id="form-submit-btn" class="btn-submit-message">
+                <span>Send Message ↗</span>
+              </button>
+
+              <div id="form-status-msg" class="form-status-msg" role="alert"></div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer & Colophon -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-top-row">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 0.5rem;">
+            <span class="brand-monogram">OC</span>
+            <span>Oran Coşkun</span>
+          </div>
+          <p class="footer-colophon">
+            Information Technology Teacher & Computer Science Educator. Designed with editorial care, semantic HTML5,
+            and accessible web standards.
+          </p>
+        </div>
+
+        <div>
+          <button type="button" class="footer-back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <span>↑ Back to top</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>© 2026 Oran Coşkun. All rights reserved.</div>
+        <div>Teaching with passion in Yalova</div>
+        <div>Status: <span style="color: var(--accent-emerald);">● CLASSROOM & LABS ACTIVE</span></div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       MODALS & OVERLAYS
+       ========================================== -->
+
+  <!-- 1. Project Detail Modal -->
+  <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-project-title" class="modal-title">Project Details</h3>
+        <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Close Project Modal">✕</button>
+      </div>
+      <div id="modal-project-body" class="modal-body">
+        <!-- Injected via scripts/main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Command Palette Overlay (Cmd+K) -->
+  <div id="cmd-palette" class="cmd-palette-backdrop" role="dialog" aria-modal="true" aria-label="Quick Command Palette">
+    <div class="cmd-palette-dialog">
+      <div class="cmd-input-bar">
+        <span style="font-size: 1.1rem; color: var(--text-muted);">🔍</span>
+        <input type="text" id="cmd-palette-input" class="cmd-input"
+          placeholder="Search courses, projects, or sections..." autocomplete="off">
+        <span class="kbd-shortcut">ESC</span>
+      </div>
+      <ul id="cmd-palette-results" class="cmd-results-list">
+        <!-- Rendered via scripts/main.js -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Main JavaScript Logic -->
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

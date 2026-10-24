@@ -1,0 +1,21 @@
+{
+  "name": "oran-coskun-it-teacher-portfolio",
+  "version": "1.0.0",
+  "description": "Personal website and educational portfolio of Oran Coşkun, IT Teacher & Computer Science Educator",
+  "scripts": {
+    "start": "python3 -m http.server 4173",
+    "dev": "python3 -m http.server 4173",
+    "open": "open http://localhost:4173"
+  },
+  "keywords": [
+    "portfolio",
+    "it-teacher",
+    "computer-science",
+    "education",
+    "curriculum",
+    "minimalist",
+    "editorial"
+  ],
+  "author": "Oran Coşkun",
+  "license": "MIT"
+}
